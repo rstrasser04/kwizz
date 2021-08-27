@@ -166,8 +166,8 @@ export const deleteQuestions = /* GraphQL */ `
     }
   }
 `;
-export const createQuestionsDb = /* GraphQL */ `
-  mutation CreateQuestionsDb(
+export const createQuestionsDB = /* GraphQL */ `
+  mutation CreateQuestionsDB(
     $input: CreateQuestionsDBInput!
     $condition: ModelQuestionsDBConditionInput
   ) {
@@ -197,8 +197,8 @@ export const createQuestionsDb = /* GraphQL */ `
     }
   }
 `;
-export const updateQuestionsDb = /* GraphQL */ `
-  mutation UpdateQuestionsDb(
+export const updateQuestionsDB = /* GraphQL */ `
+  mutation UpdateQuestionsDB(
     $input: UpdateQuestionsDBInput!
     $condition: ModelQuestionsDBConditionInput
   ) {
@@ -228,8 +228,8 @@ export const updateQuestionsDb = /* GraphQL */ `
     }
   }
 `;
-export const deleteQuestionsDb = /* GraphQL */ `
-  mutation DeleteQuestionsDb(
+export const deleteQuestionsDB = /* GraphQL */ `
+  mutation DeleteQuestionsDB(
     $input: DeleteQuestionsDBInput!
     $condition: ModelQuestionsDBConditionInput
   ) {

@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "quizit3df1a9e52_identitypool_df1a9e52",
+    "identityPoolName": "quiz0198b309_identitypool_0198b309",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "quizitdf1a9e52",
-    "userPoolName": "quizit3df1a9e52_userpool_df1a9e52",
+    "resourceNameTruncated": "quiz0198b309",
+    "userPoolName": "quiz0198b309_userpool_0198b309",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -20,7 +20,10 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientGenerateSecret": true,
+    "aliasAttributes": [
+        "email"
+    ],
+    "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
         "email"
@@ -28,17 +31,11 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "quizitdf1a9e52_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "quiz010198b309_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "useDefault": "manual",
+    "sharedId": "0198b309",
+    "resourceName": "quiz0198b309",
     "authSelections": "identityPoolAndUserPool",
-    "resourceName": "quizit3df1a9e52df1a9e52",
-    "thirdPartyAuth": false,
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "triggers": "{}",
-    "hostedUI": false,
-    "userPoolGroupList": [],
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -51,9 +48,15 @@
             "Arn"
         ]
     },
+    "useDefault": "default",
+    "triggers": "{}",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
     "parentStack": {
         "Ref": "AWS::StackId"
     },
+    "breakCircularDependency": true,
     "permissions": [],
     "dependsOn": []
 }

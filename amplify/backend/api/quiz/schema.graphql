@@ -1,4 +1,4 @@
-type Quiz @model @auth(rules: [{ allow: public, provider: iam }]) {
+type Quiz @model @auth(rules: [{ allow: private, provider: iam }]) {
   id: ID!
   title: String!
   seconds: Int!

@@ -1,55 +1,30 @@
 {
-  "prod": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-quizit3-prod-214330-authRole",
-      "UnauthRoleArn": "arn:aws:iam::331566579748:role/amplify-quizit3-prod-214330-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::331566579748:role/amplify-quizit3-prod-214330-authRole",
-      "Region": "eu-west-1",
-      "DeploymentBucketName": "amplify-quizit3-prod-214330-deployment",
-      "UnauthRoleName": "amplify-quizit3-prod-214330-unauthRole",
-      "StackName": "amplify-quizit3-prod-214330",
-      "StackId": "arn:aws:cloudformation:eu-west-1:331566579748:stack/amplify-quizit3-prod-214330/11e206e0-7451-11ea-afef-0a0af0d573f8",
-      "AmplifyAppId": "d1qdenhzp003kw"
+      "AuthRoleName": "amplify-quiz-dev-122346-authRole",
+      "UnauthRoleArn": "arn:aws:iam::076005434014:role/amplify-quiz-dev-122346-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::076005434014:role/amplify-quiz-dev-122346-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-quiz-dev-122346-deployment",
+      "UnauthRoleName": "amplify-quiz-dev-122346-unauthRole",
+      "StackName": "amplify-quiz-dev-122346",
+      "StackId": "arn:aws:cloudformation:us-east-1:076005434014:stack/amplify-quiz-dev-122346/60adfd90-0692-11ec-b50c-0a8c479d0b73",
+      "AmplifyAppId": "d2ydd4dkd5l4tw"
     },
     "categories": {
+      "auth": {
+        "quiz0198b309": {}
+      },
       "hosting": {
         "amplifyhosting": {
-          "appId": "d1qdenhzp003kw",
+          "appId": "d2ydd4dkd5l4tw",
           "type": "manual"
         }
       },
-      "auth": {
-        "quizit3df1a9e52df1a9e52": {}
-      },
       "function": {
-        "addData": {},
-        "S3Trigger739d230f": {}
-      }
-    }
-  },
-  "test": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-quizit3-test-163419-authRole",
-      "UnauthRoleArn": "arn:aws:iam::331566579748:role/amplify-quizit3-test-163419-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::331566579748:role/amplify-quizit3-test-163419-authRole",
-      "Region": "eu-west-1",
-      "DeploymentBucketName": "amplify-quizit3-test-163419-deployment",
-      "UnauthRoleName": "amplify-quizit3-test-163419-unauthRole",
-      "StackName": "amplify-quizit3-test-163419",
-      "StackId": "arn:aws:cloudformation:eu-west-1:331566579748:stack/amplify-quizit3-test-163419/af9aa6a0-8638-11ea-b924-0ac92d082ee0",
-      "AmplifyAppId": "d1qdenhzp003kw"
-    },
-    "categories": {
-      "auth": {
-        "quizit3df1a9e52df1a9e52": {}
-      },
-      "function": {
-        "addData": {}
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1qdenhzp003kw",
-          "type": "manual"
+        "S3Trigger2195cc48": {
+          "deploymentBucketName": "amplify-quiz-dev-122346-deployment",
+          "s3Key": "amplify-builds/S3Trigger2195cc48-336a5a77534e426b5477-build.zip"
         }
       }
     }

@@ -1,6 +1,6 @@
 import React from "react";
-import Amplify, { graphqlOperation } from "@aws-amplify/core";
-import Auth from "@aws-amplify/auth";
+import { graphqlOperation } from "@aws-amplify/core";
+import Amplify, { Auth } from 'aws-amplify';
 import API from "@aws-amplify/api";
 import * as queries from "./graphql/queries";
 //import { DataStore } from "@aws-amplify/datastore";
@@ -23,6 +23,7 @@ import ReactGA from "react-ga";
 ReactGA.initialize("UA-154890668-2");
 ReactGA.pageview(window.location.pathname + window.location.search);
 Amplify.configure(awsConfig);
+Auth.configure(awsConfig);
 
 export default class IndexPage extends React.Component {
   state = {
@@ -104,14 +105,14 @@ export default class IndexPage extends React.Component {
         id: { beginsWith: this.state.gamecode },
       };
       const quiz = await API.graphql({
-        query: queries.listQuizs,
+        query: queries.listQuizzes,
         variables: { filter: filter },
       });
 
-      if (quiz.data.listQuizs.items.length === 0) {
+      if (quiz.data.listQuizzes.items.length === 0) {
         this.setState({ error: "There is no game with this code" });
       } else {
-        localStorage.setItem("gamecode", quiz.data.listQuizs.items[0].id);
+        localStorage.setItem("gamecode", quiz.data.listQuizzes.items[0].id);
         this.changePath("auth");
       }
     }

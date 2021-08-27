@@ -55,13 +55,13 @@ export const getQuiz = /* GraphQL */ `
     }
   }
 `;
-export const listQuizs = /* GraphQL */ `
-  query ListQuizs(
+export const listQuizzes = /* GraphQL */ `
+  query ListQuizzes(
     $filter: ModelQuizFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listQuizs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listQuizzes(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         title
@@ -155,13 +155,13 @@ export const getQuestions = /* GraphQL */ `
     }
   }
 `;
-export const listQuestionss = /* GraphQL */ `
-  query ListQuestionss(
+export const listQuestions = /* GraphQL */ `
+  query ListQuestions(
     $filter: ModelQuestionsFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listQuestionss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listQuestions(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         image
@@ -192,8 +192,8 @@ export const listQuestionss = /* GraphQL */ `
     }
   }
 `;
-export const syncQuestionsDbs = /* GraphQL */ `
-  query SyncQuestionsDbs(
+export const syncQuestionsDBS = /* GraphQL */ `
+  query SyncQuestionsDBS(
     $filter: ModelQuestionsDBFilterInput
     $limit: Int
     $nextToken: String
@@ -234,8 +234,8 @@ export const syncQuestionsDbs = /* GraphQL */ `
     }
   }
 `;
-export const getQuestionsDb = /* GraphQL */ `
-  query GetQuestionsDb($id: ID!) {
+export const getQuestionsDB = /* GraphQL */ `
+  query GetQuestionsDB($id: ID!) {
     getQuestionsDB(id: $id) {
       id
       image
@@ -262,13 +262,13 @@ export const getQuestionsDb = /* GraphQL */ `
     }
   }
 `;
-export const listQuestionsDBs = /* GraphQL */ `
-  query ListQuestionsDBs(
+export const listQuestionsDBS = /* GraphQL */ `
+  query ListQuestionsDBS(
     $filter: ModelQuestionsDBFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listQuestionsDBs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listQuestionsDBS(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         image
@@ -344,13 +344,13 @@ export const getSubscribers = /* GraphQL */ `
     }
   }
 `;
-export const listSubscriberss = /* GraphQL */ `
-  query ListSubscriberss(
+export const listSubscribers = /* GraphQL */ `
+  query ListSubscribers(
     $filter: ModelSubscribersFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listSubscriberss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listSubscribers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         type
@@ -412,13 +412,13 @@ export const getResponses = /* GraphQL */ `
     }
   }
 `;
-export const listResponsess = /* GraphQL */ `
-  query ListResponsess(
+export const listResponses = /* GraphQL */ `
+  query ListResponses(
     $filter: ModelResponsesFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listResponsess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listResponses(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         quiz
@@ -477,13 +477,13 @@ export const getLanguages = /* GraphQL */ `
     }
   }
 `;
-export const listLanguagess = /* GraphQL */ `
-  query ListLanguagess(
+export const listLanguages = /* GraphQL */ `
+  query ListLanguages(
     $filter: ModelLanguagesFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listLanguagess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listLanguages(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         type

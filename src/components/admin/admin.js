@@ -4,11 +4,11 @@ import Layout from "../layoutAdmin";
 import { DataStore } from "@aws-amplify/datastore";
 import { Quiz, Subscribers, Questions, Responses } from "../../models/";
 import { Link } from "react-router-dom";
-import Amplify, { Hub } from "@aws-amplify/core";
+import { Hub } from "@aws-amplify/core";
 import Footer from "../footerAdmin";
 import awsconfig from "../../aws-exports";
 import Storage from "@aws-amplify/storage";
-import { Auth } from "@aws-amplify/auth";
+import Amplify, { Auth } from 'aws-amplify';
 
 import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 

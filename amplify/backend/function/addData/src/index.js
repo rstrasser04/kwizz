@@ -1,6 +1,6 @@
 var AWS = require("aws-sdk");
 // Set the region
-AWS.config.update({ region: "eu-west-1" });
+AWS.config.update({ region: "us-east-1" });
 var documentClient = new AWS.DynamoDB.DocumentClient({
   apiVersion: "2012-08-10"
 });
@@ -45,7 +45,7 @@ exports.handler = async event => {
 
 /*
 var AWS = require("aws-sdk")
-var dynamodb = new AWS.DynamoDB({ region: "eu-west-1" })
+var dynamodb = new AWS.DynamoDB({ region: "us-east-1" })
 
 async function add() {
   var params = {

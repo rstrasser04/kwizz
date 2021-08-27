@@ -4,6 +4,30 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 
 
+type QuizMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type QuestionsMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type QuestionsDBMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type SubscribersMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type ResponsesMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type LanguagesMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 export declare class Quiz {
   readonly id: string;
   readonly title: string;
@@ -14,8 +38,10 @@ export declare class Quiz {
   readonly questionTime?: number;
   readonly view?: number;
   readonly owner: string;
-  constructor(init: ModelInit<Quiz>);
-  static copyOf(source: Quiz, mutator: (draft: MutableModel<Quiz>) => MutableModel<Quiz> | void): Quiz;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Quiz, QuizMetaData>);
+  static copyOf(source: Quiz, mutator: (draft: MutableModel<Quiz, QuizMetaData>) => MutableModel<Quiz, QuizMetaData> | void): Quiz;
 }
 
 export declare class Questions {
@@ -37,8 +63,10 @@ export declare class Questions {
   readonly public?: boolean;
   readonly fromLibrary?: boolean;
   readonly category?: string;
-  constructor(init: ModelInit<Questions>);
-  static copyOf(source: Questions, mutator: (draft: MutableModel<Questions>) => MutableModel<Questions> | void): Questions;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Questions, QuestionsMetaData>);
+  static copyOf(source: Questions, mutator: (draft: MutableModel<Questions, QuestionsMetaData>) => MutableModel<Questions, QuestionsMetaData> | void): Questions;
 }
 
 export declare class QuestionsDB {
@@ -59,8 +87,10 @@ export declare class QuestionsDB {
   readonly public?: boolean;
   readonly category?: string;
   readonly language?: string;
-  constructor(init: ModelInit<QuestionsDB>);
-  static copyOf(source: QuestionsDB, mutator: (draft: MutableModel<QuestionsDB>) => MutableModel<QuestionsDB> | void): QuestionsDB;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<QuestionsDB, QuestionsDBMetaData>);
+  static copyOf(source: QuestionsDB, mutator: (draft: MutableModel<QuestionsDB, QuestionsDBMetaData>) => MutableModel<QuestionsDB, QuestionsDBMetaData> | void): QuestionsDB;
 }
 
 export declare class Subscribers {
@@ -69,8 +99,10 @@ export declare class Subscribers {
   readonly score: number;
   readonly quizID: string;
   readonly name: string;
-  constructor(init: ModelInit<Subscribers>);
-  static copyOf(source: Subscribers, mutator: (draft: MutableModel<Subscribers>) => MutableModel<Subscribers> | void): Subscribers;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Subscribers, SubscribersMetaData>);
+  static copyOf(source: Subscribers, mutator: (draft: MutableModel<Subscribers, SubscribersMetaData>) => MutableModel<Subscribers, SubscribersMetaData> | void): Subscribers;
 }
 
 export declare class Responses {
@@ -78,14 +110,18 @@ export declare class Responses {
   readonly quiz: string;
   readonly subscriber: string;
   readonly question: string;
-  constructor(init: ModelInit<Responses>);
-  static copyOf(source: Responses, mutator: (draft: MutableModel<Responses>) => MutableModel<Responses> | void): Responses;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Responses, ResponsesMetaData>);
+  static copyOf(source: Responses, mutator: (draft: MutableModel<Responses, ResponsesMetaData>) => MutableModel<Responses, ResponsesMetaData> | void): Responses;
 }
 
 export declare class Languages {
   readonly id: string;
   readonly type: string;
   readonly code: string;
-  constructor(init: ModelInit<Languages>);
-  static copyOf(source: Languages, mutator: (draft: MutableModel<Languages>) => MutableModel<Languages> | void): Languages;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Languages, LanguagesMetaData>);
+  static copyOf(source: Languages, mutator: (draft: MutableModel<Languages, LanguagesMetaData>) => MutableModel<Languages, LanguagesMetaData> | void): Languages;
 }

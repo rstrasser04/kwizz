@@ -148,8 +148,8 @@ export const onDeleteQuestions = /* GraphQL */ `
     }
   }
 `;
-export const onCreateQuestionsDb = /* GraphQL */ `
-  subscription OnCreateQuestionsDb {
+export const onCreateQuestionsDB = /* GraphQL */ `
+  subscription OnCreateQuestionsDB {
     onCreateQuestionsDB {
       id
       image
@@ -176,8 +176,8 @@ export const onCreateQuestionsDb = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateQuestionsDb = /* GraphQL */ `
-  subscription OnUpdateQuestionsDb {
+export const onUpdateQuestionsDB = /* GraphQL */ `
+  subscription OnUpdateQuestionsDB {
     onUpdateQuestionsDB {
       id
       image
@@ -204,8 +204,8 @@ export const onUpdateQuestionsDb = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteQuestionsDb = /* GraphQL */ `
-  subscription OnDeleteQuestionsDb {
+export const onDeleteQuestionsDB = /* GraphQL */ `
+  subscription OnDeleteQuestionsDB {
     onDeleteQuestionsDB {
       id
       image
